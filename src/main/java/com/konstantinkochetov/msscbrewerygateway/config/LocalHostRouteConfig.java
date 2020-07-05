@@ -13,7 +13,7 @@ public class LocalHostRouteConfig {
     // take a look (matchers): https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/util/AntPathMatcher.html
 
     @Bean
-    public RouteLocator localHostRoutes(RouteLocatorBuilder builder){
+    public RouteLocator localHostRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(r -> r.path("/api/v1/beer*", "/api/v1/beer/*", "/api/v1/beerUpc/*")
                         .uri("http://localhost:8080")
